@@ -23,4 +23,9 @@ public class TimeController : MonoBehaviour
             EventLevelCondition.outOfTimeEvent();
         }
     }
+
+    public void ResetTimer()
+    {
+        TimeCounter.TimeCount = 0;
+    }
 }

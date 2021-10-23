@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimeCounter : MonoBehaviour
 {
-    public static float TimeCount { private set; get; } = 0;
+    public static float TimeCount { set; get; } = 0;
 
     // Update is called once per frame
     void Update()
@@ -12,4 +12,7 @@ public class TimeCounter : MonoBehaviour
         TimeCount += Time.deltaTime;
         UIManager.UIManagerInstance.UpdateTimerText(TimeCount);
     }
+
+
+
 }

@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Movement\MovementActivatoTrigger.cs" />
     <Compile Include="Assets\Scripts\Movement\MovementActivator.cs" />
     <Compile Include="Assets\Scripts\Movement\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerInitialMovement.cs" />
     <Compile Include="Assets\Scripts\PortalLogic\Portal.cs" />
     <Compile Include="Assets\Scripts\View\UIManager.cs" />
     <Reference Include="UnityEngine">

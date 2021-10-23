@@ -44,6 +44,8 @@ public class EndLevelConditionController : MonoBehaviour
     public void ResetLevel() // Este metodo deberia estar en otro script
     {
         ActionControl.actionInstance.Reset();
+        gameObject.GetComponent<PlayerInitialMovement>().ResetPosition();
+        gameObject.GetComponent<TimeController>().ResetTimer();
         Debug.Log("Resetear Nivel");
     }
 
