@@ -22,18 +22,30 @@ public class EndLevelConditionController : MonoBehaviour
 
     private void OutOfTime()
     {
-        Debug.Log("Se me acabó el tiempo");
+        UIManager.UIManagerInstance.ShowEndLevelDisplay("Se te acabo el tiempo");
+        Invoke("ResetLevel", 1);
     }
     private void OutOfMovement()
     {
-        Debug.Log("Se me acabaron los movimientos");
+        UIManager.UIManagerInstance.ShowEndLevelDisplay("Perdiste, Sin Movimientos");
+        Invoke("ResetLevel", 1);
     }
     private void GetToTheGoal()
     {
-        Debug.Log("Llegue a la meta bien");
+        UIManager.UIManagerInstance.ShowEndLevelDisplay("Llegue a la meta bien");
+        Invoke("ResetLevel", 1);
     }
     private void DontReachAllMovement()
     {
-        Debug.Log("Llegue a la meta y me quedan movimientos");
+        UIManager.UIManagerInstance.ShowEndLevelDisplay("Te sobraron Movimientos");
+        Invoke("ResetLevel", 1);
     }
+
+    public void ResetLevel() // Este metodo deberia estar en otro script
+    {
+        ActionControl.actionInstance.Reset();
+        Debug.Log("Resetear Nivel");
+    }
+
+    
 }

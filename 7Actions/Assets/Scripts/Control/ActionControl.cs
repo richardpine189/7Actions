@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ActionControl : MonoBehaviour
 {
-    public static int Action { private set; get; } = 7;
-
+    public int Action { private set; get; } = 7;
+    public static ActionControl actionInstance;
 
     private void Awake()
     {
+        actionInstance = this;
         SendActionToUI(Action);
     }
     private void Start()
@@ -21,16 +22,22 @@ public class ActionControl : MonoBehaviour
     }
     public void RealizeAction()
     {
-        if (Action > 0)
+        if (Action >= 0)
         {
             Action = Action - 1;
             
         }
-        SendActionToUI(Action);
         if(Action < 0)
         {
             EventLevelCondition.outOfMovementEvent();
         }
+        SendActionToUI(Action);
+    }
+
+    public void Reset()
+    {
+        Action = 7;
+        SendActionToUI(Action);
     }
 
     private void SendActionToUI(int action)

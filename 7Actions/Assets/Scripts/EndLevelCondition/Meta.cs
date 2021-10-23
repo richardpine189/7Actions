@@ -8,7 +8,7 @@ public class Meta : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            if (ActionControl.Action != 0) // OverCodeado
+            if (ActionControl.actionInstance.Action != 0) // OverCodeado
             {
                 EventLevelCondition.wrongMovementEvent();
             }

@@ -68,7 +68,6 @@
     <Compile Include="Assets\Scripts\Control\EventAction.cs" />
     <Compile Include="Assets\Scripts\Control\TimeController.cs" />
     <Compile Include="Assets\Scripts\Control\TimeCounter.cs" />
-    <Compile Include="Assets\Scripts\Control\UIManager.cs" />
     <Compile Include="Assets\Scripts\EndLevelCondition\EndLevelConditionController.cs" />
     <Compile Include="Assets\Scripts\EndLevelCondition\EventLevelCondition.cs" />
     <Compile Include="Assets\Scripts\EndLevelCondition\Meta.cs" />
@@ -76,6 +75,7 @@
     <Compile Include="Assets\Scripts\Movement\MovementActivator.cs" />
     <Compile Include="Assets\Scripts\Movement\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PortalLogic\Portal.cs" />
+    <Compile Include="Assets\Scripts\View\UIManager.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

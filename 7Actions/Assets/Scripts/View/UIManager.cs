@@ -26,4 +26,10 @@ public class UIManager : MonoBehaviour
     {
         actionText.text = $"Actions Left: {a}";
     }
+
+    public void ShowEndLevelDisplay(string message)
+    {
+        adviseText.text = message;
+        adviseText.gameObject.SetActive(true);
+    }
 }
