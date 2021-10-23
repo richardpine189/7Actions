@@ -6,7 +6,6 @@ public class TimeController : MonoBehaviour
 {
     public void Controller()
     {
-
         if(TimeCounter.TimeCount > 7)
         {
             //Quitar Una Estrella
