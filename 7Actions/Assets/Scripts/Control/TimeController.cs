@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TimeController : MonoBehaviour
 {
+
     public void Controller()
     {
         if(TimeCounter.TimeCount > 7)

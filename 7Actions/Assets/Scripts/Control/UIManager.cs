@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,19 +13,13 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-        
             UIManagerInstance = this;
-        
-    }
-    private UIManager()
-    {
-            
-        
     }
 
-    public void UpdateTimerText(int t)
+    public void UpdateTimerText(float t)
     {
-        timerText.text = $"Timer: {t}";
+        
+        timerText.text = $"Timer: {Math.Round(t, 2)}";
     }
     public void UpdateActionText(int a)
     {
