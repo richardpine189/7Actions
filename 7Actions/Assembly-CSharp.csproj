@@ -69,6 +69,8 @@
     <Compile Include="Assets\Scripts\Control\TimeController.cs" />
     <Compile Include="Assets\Scripts\Control\TimeCounter.cs" />
     <Compile Include="Assets\Scripts\Control\UIManager.cs" />
+    <Compile Include="Assets\Scripts\EndLevelCondition\EndLevelConditionController.cs" />
+    <Compile Include="Assets\Scripts\EndLevelCondition\EventLevelCondition.cs" />
     <Compile Include="Assets\Scripts\EndLevelCondition\Meta.cs" />
     <Compile Include="Assets\Scripts\Movement\MovementActivatoTrigger.cs" />
     <Compile Include="Assets\Scripts\Movement\MovementActivator.cs" />

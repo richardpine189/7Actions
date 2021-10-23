@@ -10,7 +10,6 @@ public class TimeCounter : MonoBehaviour
     void Update()
     {
         TimeCount += Time.deltaTime;
-        Debug.Log(TimeCount);
         UIManager.UIManagerInstance.UpdateTimerText(TimeCount);
     }
 }

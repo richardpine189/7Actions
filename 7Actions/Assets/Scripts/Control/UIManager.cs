@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] Text timerText;
     [SerializeField] Text actionText;
+    [SerializeField] Text adviseText; // Para prototipado debe eliminarse posteriormente.
 
     public static UIManager UIManagerInstance;
 

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ActionControl : MonoBehaviour
 {
-    public int Action { private set; get; } = 7;
+    public static int Action { private set; get; } = 7;
+
 
     private void Awake()
     {
@@ -26,6 +27,10 @@ public class ActionControl : MonoBehaviour
             
         }
         SendActionToUI(Action);
+        if(Action < 0)
+        {
+            EventLevelCondition.outOfMovementEvent();
+        }
     }
 
     private void SendActionToUI(int action)

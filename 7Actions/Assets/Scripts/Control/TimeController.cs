@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TimeController : MonoBehaviour
 {
-
     public void Controller()
     {
         if(TimeCounter.TimeCount > 7)
@@ -21,7 +20,7 @@ public class TimeController : MonoBehaviour
         }
         else if(TimeCounter.TimeCount >28)
         {
-            // Llamar Condicion de Derrota
+            EventLevelCondition.outOfTimeEvent();
         }
     }
 }
