@@ -18,22 +18,21 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        if (CanImove == true)
+        
+        if (horizontal != 0 && CanImove == true)
         {
-            if (horizontal != 0)
-            {
-                rbPlayer.AddForce(Vector3.right * speed * horizontal *Time.deltaTime, ForceMode2D.Impulse);
-                
-                CanImove = false;
-                EventAction.eventAction();
-            }
-            if (vertical != 0)
-            {
-                rbPlayer.AddForce(Vector3.up * speed * vertical *Time.deltaTime, ForceMode2D.Impulse);
-
-                CanImove = false;
-                EventAction.eventAction();
-            }
+            rbPlayer.velocity = new Vector2(0, 0) ;
+            rbPlayer.AddForce(Vector3.right * speed * horizontal *Time.deltaTime, ForceMode2D.Impulse);
+            CanImove = false;
+            EventAction.eventAction();
         }
+        if (vertical != 0 && CanImove == true)
+        {
+            rbPlayer.velocity = new Vector2(0, 0);
+            rbPlayer.AddForce(Vector3.up * speed * vertical *Time.deltaTime, ForceMode2D.Impulse);
+            CanImove = false;
+            EventAction.eventAction();
+        }
+        
     }
 }

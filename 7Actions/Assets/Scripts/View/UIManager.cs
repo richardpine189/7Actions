@@ -32,4 +32,8 @@ public class UIManager : MonoBehaviour
         adviseText.text = message;
         adviseText.gameObject.SetActive(true);
     }
+    public void HideEndLevelDisplay()
+    {
+        adviseText.gameObject.SetActive(false);
+    }
 }

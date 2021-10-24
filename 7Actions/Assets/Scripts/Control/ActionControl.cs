@@ -10,10 +10,11 @@ public class ActionControl : MonoBehaviour
     private void Awake()
     {
         actionInstance = this;
-        SendActionToUI(Action);
+        
     }
     private void Start()
     {
+        SendActionToUI(Action);
         EventAction.eventAction += RealizeAction;
     }
     private void OnDestroy()
